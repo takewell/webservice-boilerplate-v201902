@@ -6,4 +6,10 @@ export const doCreateUser = (id: string, username: string, email: string) =>
     email,
     username
   });
-export const onceGetUsers = () => db.collection("users").get();
+export const onceGetUsers = async () => {
+  const querySnapshot = await db.collection("users").get();
+  const users = querySnapshot.docs;
+  return users.map(user => {
+    return user.data();
+  });
+};
