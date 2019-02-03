@@ -1,5 +1,9 @@
 {
   "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
   "rulesDirectory": ["tslint-plugin-prettier"],
-  "rules": { "prettier": true }
+  "rules": {
+    "prettier": true,
+    "jsx-no-lambda": false,
+    "object-literal-sort-keys": false
+  }
 }
